@@ -13,9 +13,10 @@ class Program
             Console.WriteLine("2. Display the journal");
             Console.WriteLine("3. Save the journal to a file");
             Console.WriteLine("4. Load the journal from a file");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("5. Raise my mood with a joke.");
+            Console.WriteLine("6. Exit");
 
-            Console.Write("Select an option (1-5): ");
+            Console.Write("Select an option (1-6): ");
             string choice = Console.ReadLine();
 
             switch(choice)
@@ -54,11 +55,16 @@ class Program
                     break;
 
                 case "5":
+                    string joke = Joke.GetRandomJoke();
+                    Console.WriteLine(joke);
+                    break;
+
+                case "6":
                     isRunning = false;
                     break;
 
                 default:
-                    Console.WriteLine("Incorrect choice. Please select a valid option (1-5).");
+                    Console.WriteLine("Incorrect choice. Please select a valid option (1-6).");
                     break;    
             }
 
