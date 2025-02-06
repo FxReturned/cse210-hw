@@ -1,3 +1,5 @@
+// The system has a library of different scripts which it chooses at random.
+
 using System;
 using System.IO;
 
