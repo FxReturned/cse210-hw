@@ -9,7 +9,6 @@ namespace YouTubeVideos
         public string Author { get; set; }
         public int Length { get; set; } 
 
-        // List of comments associated with the video
         public List<Comment> Comments { get; set; }
 
         public Video(string title, string author, int length)
