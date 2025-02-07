@@ -1,9 +1,56 @@
 using System;
 
-class Program
+namespace MindfulnessProgram
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello World! This is the Mindfulness Project.");
+        static void Main(string[] args)
+        {
+            bool running = true;
+            while (running)
+            {
+                Console.Clear();
+                Console.WriteLine("=== Mindfulness Program ===");
+                Console.WriteLine("1. Breathing Activity");
+                Console.WriteLine("2. Reflection Activity");
+                Console.WriteLine("3. Listing Activity");
+                Console.WriteLine("4. View Activity Log");
+                Console.WriteLine("5. Quit");
+                Console.Write("Choose an option: ");
+                string choice = Console.ReadLine();
+
+                MindfulnessActivity activity = null;
+                switch (choice)
+                {
+                    case "1":
+                        activity = new BreathingActivity();
+                        break;
+                    case "2":
+                        activity = new ReflectionActivity();
+                        break;
+                    case "3":
+                        activity = new ListingActivity();
+                        break;
+                    case "4":
+                        ActivityLog.DisplayLog();
+                        continue; 
+                    case "5":
+                        running = false;
+                        continue;
+                    default:
+                        Console.WriteLine("Invalid choice. Press any key to try again...");
+                        Console.ReadKey();
+                        continue;
+                }
+
+                if (activity != null)
+                {
+                    activity.StartActivity();
+                }
+
+                Console.WriteLine("Press any key to return to the main menu...");
+                Console.ReadKey();
+            }
+        }
     }
 }
