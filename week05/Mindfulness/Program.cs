@@ -1,4 +1,4 @@
-using System;
+//This program exceeds requirements by including an activity log that tracks how many times each exercise is performed, offering users valuable feedback on their mindfulness practice.using System;
 
 namespace MindfulnessProgram
 {

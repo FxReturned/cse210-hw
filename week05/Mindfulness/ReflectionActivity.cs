@@ -37,7 +37,6 @@ namespace MindfulnessProgram
         {
             base.StartActivity();
 
-            // Choose a random prompt
             Random random = new Random();
             string chosenPrompt = prompts[random.Next(prompts.Count)];
             Console.Clear();
