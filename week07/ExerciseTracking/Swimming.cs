@@ -23,4 +23,11 @@ public class Swimming : Activity
         double distance = GetDistance();
         return distance > 0 ? Length / distance : 0;
     }
+
+    public override string GetSummary()
+    {
+        string dateStr = Date.ToString("dd MMM yyyy");
+        return $"{dateStr} Swimming ({Length} min) - Laps: {_laps}, " +
+               $"Speed: {GetSpeed():F2} kph, Pace: {GetPace():F2} min per km";
+    }
 }

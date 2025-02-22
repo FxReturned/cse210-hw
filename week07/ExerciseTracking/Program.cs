@@ -7,11 +7,9 @@ public class Program
     {
         List<Activity> activities = new List<Activity>();
 
-        Activity running = new Running(new DateTime(2022, 11, 03), 30, 3.0);
-
-        Activity cycling = new Cycling(new DateTime(2022, 11, 03), 30, 20);
-
-        Activity swimming = new Swimming(new DateTime(2022, 11, 03), 30, 25);
+        Activity running = new Running(new DateTime(2022, 11, 03), 35, 3.0);  
+        Activity cycling = new Cycling(new DateTime(2022, 11, 03), 30, 20);  
+        Activity swimming = new Swimming(new DateTime(2022, 11, 03), 20, 25);   
 
         activities.Add(running);
         activities.Add(cycling);

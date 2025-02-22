@@ -21,7 +21,6 @@ public abstract class Activity
         get { return _length; }
     }
 
-
     public abstract double GetDistance();
     public abstract double GetSpeed();
     public abstract double GetPace();
@@ -29,10 +28,6 @@ public abstract class Activity
     public virtual string GetSummary()
     {
         string dateString = _date.ToString("dd MMM yyyy");
-        string activityType = this.GetType().Name;
-        return $"{dateString} {activityType} ({_length} min) - " +
-               $"Distance: {GetDistance():F2} km, " +
-               $"Speed: {GetSpeed():F2} kph, " +
-               $"Pace: {GetPace():F2} min per km";
+        return $"{dateString} {this.GetType().Name} ({_length} min)";
     }
 }
